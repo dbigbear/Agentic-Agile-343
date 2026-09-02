@@ -2,18 +2,26 @@
 
 ## Unreleased
 
-- `skill_release.py publish` now synchronizes the public `Agentic-Agile-343` directory to contain only user-facing documents and the validated release ZIP; source code remains in `Agentic-Agile-343-Code`.
+- 下一版本内容将在这里累积。
 
 > 🌐 English version: [RELEASE_NOTES.en.md](RELEASE_NOTES.en.md)
 
-# Agentic Agile 3-4-3 治理架构 · 开源版 v1.60.0
+# Agentic Agile 3-4-3 治理架构 · 开源版 v1.61.0
 
 > **先校准、再打怪。** 这是完整、可运行的 Agentic AI 研发治理框架——全部开源，无保留。让 AI 研发治理，进可攻退可守。
 
-- **版本**：`1.60.0`
+- **版本**：`1.61.0`
 - **发布日期**：2026-08-16
 - **许可证**：代码/模板 MIT · 白皮书 CC BY 4.0
 - **作者**：王立杰（无敌哥），AI 治理架构师
+
+## v1.61.0：可信 Dashboard 与项目聚合修复
+
+- Dashboard 在缺少可信遥测或模板损坏时 fail closed，不再展示伪 Demo 或静默降级为原始 JSON；模板页明确提示正确的项目 Dashboard 入口。
+- 生成器与 Evidence 收口共同验证内嵌数据、scope、task 绑定、关键渲染入口和 `governance/dashboards/` 路径协议，并对遥测文本与链接执行安全转义。
+- 项目上下文压缩比保留最近一次有效实测及来源任务，不再被后续未采集 run 清空；未采集提示改为优先使用 `change prepare` 自动生成 Context Pack measurement。
+- 门禁面板覆盖 G0-G8，分别显示已评估、通过、未通过和未评估，并区分项目重建实测与单任务快照，避免 `0/8` 等歧义表达。
+- 补齐自然语言能力路由、六个持续控制面声明、export-ignore 清单和原生 Windows Python 3.10-3.12 CI。
 
 ## v1.53.1：契约文件名大小写兼容修复
 

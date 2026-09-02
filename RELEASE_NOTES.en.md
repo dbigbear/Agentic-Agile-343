@@ -2,18 +2,26 @@
 
 ## Unreleased
 
-- `skill_release.py publish` now synchronizes the public `Agentic-Agile-343` directory to contain only user-facing documents and the validated release ZIP; source code remains in `Agentic-Agile-343-Code`.
+- Changes for the next release will accumulate here.
 
 > 🌐 中文版: [RELEASE_NOTES.md](RELEASE_NOTES.md)
 
-# Agentic Agile 3-4-3 Governance Framework · Open Source Edition v1.60.0
+# Agentic Agile 3-4-3 Governance Framework · Open Source Edition v1.61.0
 
 > **Calibrate first, then fight the bosses.** A complete, runnable governance framework for Agentic AI development — fully open source, no reservations. Let AI R&D governance be both offensive and defensive.
 
-- **Version**: `1.60.0`
+- **Version**: `1.61.0`
 - **Release date**: 2026-08-16
 - **License**: Code/templates MIT · Whitepaper CC BY 4.0
 - **Author**: Wang Lijie (无敌哥), AI Governance Architect
+
+## v1.61.0: Trustworthy dashboards and project aggregation
+
+- Dashboards now fail closed when trusted telemetry or a valid template is missing, without fabricated demo metrics or a raw-JSON fallback. The source template clearly directs users to the generated project dashboard.
+- Dashboard generation and Evidence closure validate embedded data, scope, task binding, required renderers, and the `governance/dashboards/` path contract, while escaping telemetry-controlled text and links.
+- Project context compression retains the latest valid measured run and its source task instead of being erased by a later unmeasured run. Missing-data guidance now prefers automatic Context Pack measurement during `change prepare`.
+- The gate panel covers G0-G8 and separates evaluated, passed, failed, and unassessed counts, with explicit provenance for live project rebuilds versus task snapshots.
+- Adds the natural-language capability routing contract, six continuous control-plane declarations, export-ignore metadata, and native Windows CI for Python 3.10-3.12.
 
 ## v1.53.1: Case-insensitive contract filename discovery
 
